@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(to right, #00266d, #91b1e7);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    nav {
+      background: linear-gradient(to right, #ff512f, #dd2476);
+      color: white;
+      text-align: center;
+      padding: 0.5rem;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      flex: 1;
+      padding: 1rem;
+    }
+
+    .main-content {
+      background: linear-gradient(to bottom, #fceabb, #f8b500);
+      padding: 2rem;
+      font-size: 1.2rem;
+    }
+
+    .side-content {
+      background: linear-gradient(to bottom, #89f7fe, #66a6ff);
+      padding: 2rem;
+      font-size: 1.2rem;
+    }
+    .pk{
+        color: rgb(73, 68, 68);
+    }
+
+    footer {
+      background: linear-gradient(to right, #4400ff, #ff0055);
+      color: white;
+      text-align: center;
+      padding: 0.5rem;
+      margin-top: auto;
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+      body {
+        align-items: center;
+        justify-content: center;
+      }
+
+      .container {
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 600px;
+        padding: 1rem;
+      }
+
+      header, nav, footer {
+        width: 100%;
+        max-width: 600px;
+      }
+
+      .main-content, .side-content {
+        padding: 1rem;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Header Section</h1>
+  </header>
+
+  <nav>
+    <p>Navigation Links</p>
+  </nav>
+
+  <div class="container">
+    <div class="main-content">
+      <h2>Main Content</h2>
+      <article>
+        <h3>Article 1</h3>
+        <p class="pk">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quam exercitationem ipsa, quas sit laboriosam alias obcaecati quae architecto. Recusandae.</p>
+      </article>
+      <article>
+        <h3>Article 2</h3>
+        <p class="pk">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas distinctio voluptatum quas sint neque corporis totam est similique accusantium eius?</p>
+      </article>
+    </div>
+
+    <div class="side-content">
+      <h2>Side Content</h2>
+      <ul class="pk">
+        <li > Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint, numquam.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, possimus?</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, fuga.</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; <span style="color: black;">PRAVEEN KUMAR E </span> Semantic Layout</p>
+  </footer>
+
+</body>
+</html>
